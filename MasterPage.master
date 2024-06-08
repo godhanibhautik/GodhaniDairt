@@ -1,0 +1,69 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Godhani Dairy</title>
+    <Link rel="website icon" type="png" href="logo/newlogo.png" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+     <div align="center">
+    
+        <asp:Image ID="Image1" runat="server" Height="40%" 
+            ImageUrl="~/logo/newlogo.png" Width="20%" BackColor="#9CAAC1" />
+        <br />
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Algerian" 
+            Font-Underline="True" Text=" DAIRY PRODUCTS" Font-Size="100%" Height="25%" ></asp:Label>
+    
+        <br />
+        <br />
+
+        <div align="left">
+         <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+             <DynamicHoverStyle Font-Size="16pt" />
+             <DynamicMenuItemStyle Font-Size="15pt" HorizontalPadding="20px" />
+             <DynamicMenuStyle HorizontalPadding="40px" />
+            <Items>
+                <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="PRODUCTS" Value="PRODUCTS" NavigateUrl="~/Product.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem Text="ABOUT US" Value="ABOUT US">
+                    <asp:MenuItem NavigateUrl="~/ourstory.aspx" Text="Our Story" Value="Our Story">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/farmerinitiatives.aspx" Text="Farmer Initiatives" 
+                        Value="Farmer Initiatives"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="CONTACT US" Value="CONTACT US" 
+                    NavigateUrl="~/contactus.aspx"></asp:MenuItem>
+            </Items>
+             <StaticHoverStyle Font-Size="19pt" />
+            <StaticMenuItemStyle Font-Bold="True" Font-Names="Arial Black" 
+                Font-Overline="False" Font-Size="X-Large" Font-Underline="True" 
+                ForeColor="#990000" HorizontalPadding="40px" />
+             <StaticSelectedStyle Font-Overline="False" />
+        </asp:Menu>
+    <br />
+    </div>
+
+ <br />
+    </div>
+<br />
+    
+    
+    
+    <div>
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+    </form>
+</body>
+</html>
