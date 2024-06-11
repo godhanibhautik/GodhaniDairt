@@ -168,6 +168,8 @@
         </asp:CreateUserWizard>
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/userloginpage.aspx" 
             Font-Bold="True" Font-Size="X-Large" ForeColor="#CC0000">Login</asp:HyperLink>
+         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/home.aspx" 
+         Font-Bold="True" Font-Size="X-Large" ForeColor="#CC0000">Login</asp:HyperLink>
     </div>
     </form>
 </body>
